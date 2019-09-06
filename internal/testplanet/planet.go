@@ -20,7 +20,6 @@ import (
 	"go.uber.org/zap/zaptest"
 	"golang.org/x/sync/errgroup"
 
-	"storj.io/storj/bootstrap"
 	"storj.io/storj/internal/testidentity"
 	"storj.io/storj/pkg/identity"
 	"storj.io/storj/pkg/storj"
@@ -65,7 +64,6 @@ type Planet struct {
 	databases []io.Closer
 	uplinks   []*Uplink
 
-	Bootstrap      *bootstrap.Peer
 	VersionControl *versioncontrol.Peer
 	Satellites     []*SatelliteSystem
 	StorageNodes   []*storagenode.Peer
@@ -169,11 +167,6 @@ func NewCustom(log *zap.Logger, config Config) (*Planet, error) {
 	planet.whitelistPath = whitelistPath
 
 	planet.VersionControl, err = planet.newVersionControlServer()
-	if err != nil {
-		return nil, errs.Combine(err, planet.Shutdown())
-	}
-
-	planet.Bootstrap, err = planet.newBootstrap()
 	if err != nil {
 		return nil, errs.Combine(err, planet.Shutdown())
 	}
@@ -308,4 +301,35 @@ func (planet *Planet) WriteWhitelist(version storj.IDVersion) (string, error) {
 	}.Save(signer.PeerCA())
 
 	return whitelistPath, err
+}
+
+// newVersionControlServer initializes the Versioning Server
+func (planet *Planet) newVersionControlServer() (peer *versioncontrol.Peer, err error) {
+
+	prefix := "versioncontrol"
+	log := planet.log.Named(prefix)
+	dbDir := filepath.Join(planet.directory, prefix)
+
+	if err := os.MkdirAll(dbDir, 0700); err != nil {
+		return nil, err
+	}
+
+	config := &versioncontrol.Config{
+		Address: "127.0.0.1:0",
+		Versions: versioncontrol.ServiceVersions{
+			Satellite:   "v0.0.1",
+			Storagenode: "v0.0.1",
+			Uplink:      "v0.0.1",
+			Gateway:     "v0.0.1",
+			Identity:    "v0.0.1",
+		},
+	}
+	peer, err = versioncontrol.New(log, config)
+	if err != nil {
+		return nil, err
+	}
+
+	log.Debug(" addr= " + peer.Addr())
+
+	return peer, nil
 }

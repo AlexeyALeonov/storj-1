@@ -113,7 +113,6 @@ func (inspector *Endpoint) getDashboardData(ctx context.Context) (_ *pb.Dashboar
 	if err != nil {
 		return &pb.DashboardResponse{}, Error.Wrap(err)
 	}
-
 	lastPingedAt, lastPingFromID, lastPingFromAddress := inspector.pingStats.WhenLastPinged()
 
 	return &pb.DashboardResponse{
