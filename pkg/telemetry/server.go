@@ -11,7 +11,7 @@ import (
 
 	"github.com/zeebo/admission"
 	"github.com/zeebo/admission/admproto"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 )
 
 var (

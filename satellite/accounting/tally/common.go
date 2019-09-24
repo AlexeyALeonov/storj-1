@@ -5,7 +5,7 @@ package tally
 
 import (
 	"github.com/zeebo/errs"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 )
 
 // Error is a standard error class for this package.

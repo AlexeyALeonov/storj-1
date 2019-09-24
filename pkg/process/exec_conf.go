@@ -23,9 +23,9 @@ import (
 	"github.com/zeebo/errs"
 	"github.com/zeebo/structs"
 	"go.uber.org/zap"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
-	"gopkg.in/spacemonkeygo/monkit.v2/collect"
-	"gopkg.in/spacemonkeygo/monkit.v2/present"
+	monkit "github.com/spacemonkeygo/monkit/v3"
+	"github.com/spacemonkeygo/monkit/v3/collect"
+	"github.com/spacemonkeygo/monkit/v3/present"
 
 	"storj.io/storj/internal/version"
 	"storj.io/storj/pkg/cfgstruct"

@@ -14,7 +14,7 @@ import (
 	"github.com/zeebo/errs"
 	"go.uber.org/zap"
 	"google.golang.org/grpc/codes"
-	"gopkg.in/spacemonkeygo/monkit.v2"
+	"github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/internal/errs2"
 	"storj.io/storj/internal/memory"

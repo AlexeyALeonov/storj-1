@@ -7,7 +7,7 @@ import (
 	"database/sql"
 	"flag"
 
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 )
 
 var (
@@ -28,7 +28,10 @@ func Configure(db *sql.DB, mon *monkit.Scope) {
 		db.SetConnMaxLifetime(*connMaxLifetime)
 	}
 	mon.Chain("db_stats", monkit.StatSourceFunc(
-		func(cb func(name string, val float64)) {
-			monkit.StatSourceFromStruct(db.Stats()).Stats(cb)
+		func(cb func(series monkit.Series, val float64)) {
+			monkit.StatSourceFromStruct(db.Stats()).Stats(func(series monkit.Series, val float64) {
+				series.Measurement = "db"
+				cb(series, val)
+			})
 		}))
 }

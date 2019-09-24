@@ -15,7 +15,7 @@ import (
 	"golang.org/x/sync/errgroup"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/internal/errs2"
 	"storj.io/storj/internal/memory"

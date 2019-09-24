@@ -13,7 +13,7 @@ import (
 
 	"github.com/go-redis/redis"
 	"github.com/zeebo/errs"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/storage"
 )

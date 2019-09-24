@@ -2,6 +2,8 @@ module storj.io/storj
 
 go 1.12
 
+replace gopkg.in/spacemonkeygo/monkit.v3 => /home/jeff/go/src/github.com/spacemonkeygo/monkit
+
 // force specific versions for minio
 require (
 	github.com/btcsuite/btcutil v0.0.0-20180706230648-ab6388e0c60a
@@ -95,6 +97,7 @@ require (
 	github.com/sirupsen/logrus v1.3.0 // indirect
 	github.com/skyrings/skyring-common v0.0.0-20160929130248-d1c0bb1cbd5e
 	github.com/spacemonkeygo/errors v0.0.0-20171212215202-9064522e9fd1 // indirect
+	github.com/spacemonkeygo/monkit/v3 v3.0.0-20190925165449-457167bbbdb2
 	github.com/spf13/cast v1.3.0
 	github.com/spf13/cobra v0.0.3
 	github.com/spf13/pflag v1.0.3
@@ -113,7 +116,6 @@ require (
 	github.com/zeebo/structs v1.0.2
 	go.uber.org/zap v1.10.0
 	golang.org/x/crypto v0.0.0-20190911031432-227b76d455e7
-	golang.org/x/net v0.0.0-20190916140828-c8589233b77d // indirect
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
 	golang.org/x/sys v0.0.0-20190916202348-b4ddaad3f8a3
 	golang.org/x/text v0.3.2 // indirect
@@ -124,7 +126,7 @@ require (
 	gopkg.in/Shopify/sarama.v1 v1.18.0 // indirect
 	gopkg.in/cheggaaa/pb.v1 v1.0.25 // indirect
 	gopkg.in/olivere/elastic.v5 v5.0.76 // indirect
-	gopkg.in/spacemonkeygo/monkit.v2 v2.0.0-20190612171030-cf5a9e6f8fd2
+	gopkg.in/spacemonkeygo/monkit.v3 v3.0.0-00010101000000-000000000000
 	gopkg.in/yaml.v2 v2.2.2
 	storj.io/drpc v0.0.3
 )

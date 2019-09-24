@@ -11,7 +11,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/zeebo/admission/admmonkit"
 	"go.uber.org/zap/zaptest"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 )
 
 func TestNewClient_IntervalIsZero(t *testing.T) {

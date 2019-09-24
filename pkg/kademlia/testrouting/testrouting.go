@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/pkg/pb"
 	"storj.io/storj/pkg/storj"

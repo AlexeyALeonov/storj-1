@@ -11,7 +11,7 @@ import (
 	"github.com/zeebo/admission/admmonkit"
 	"github.com/zeebo/admission/admproto"
 	"go.uber.org/zap"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 )
 
 const (
@@ -97,8 +97,8 @@ func NewClient(log *zap.Logger, remoteAddr string, opts ClientOpts) (rv *Client,
 			InstanceId:  []byte(opts.Instance),
 			Address:     remoteAddr,
 			PacketSize:  opts.PacketSize,
-			Registry:    opts.Registry,
-			ProtoOpts:   admproto.Options{FloatEncoding: opts.FloatEncoding},
+			// Registry:    opts.Registry,
+			ProtoOpts: admproto.Options{FloatEncoding: opts.FloatEncoding},
 		},
 	}, nil
 }

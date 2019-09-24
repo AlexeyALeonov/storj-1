@@ -12,7 +12,7 @@ import (
 	"github.com/zeebo/errs"
 	"go.uber.org/zap"
 	"golang.org/x/sync/errgroup"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/pkg/bloomfilter"
 	"storj.io/storj/pkg/storj"

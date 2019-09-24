@@ -10,7 +10,7 @@ import (
 	"github.com/zeebo/errs"
 	"go.uber.org/zap"
 	"golang.org/x/sync/errgroup"
-	"gopkg.in/spacemonkeygo/monkit.v2"
+	"github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/internal/errs2"
 	"storj.io/storj/internal/version"

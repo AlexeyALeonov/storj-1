@@ -12,7 +12,7 @@ import (
 	"github.com/stripe/stripe-go/client"
 	"github.com/zeebo/errs"
 	"go.uber.org/zap"
-	"gopkg.in/spacemonkeygo/monkit.v2"
+	"github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/satellite/payments"
 )

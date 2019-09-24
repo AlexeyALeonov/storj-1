@@ -5,7 +5,7 @@ package process
 
 import (
 	"google.golang.org/grpc/status"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 )
 
 func init() {

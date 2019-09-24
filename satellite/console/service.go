@@ -14,7 +14,7 @@ import (
 	"github.com/zeebo/errs"
 	"go.uber.org/zap"
 	"golang.org/x/crypto/bcrypt"
-	"gopkg.in/spacemonkeygo/monkit.v2"
+	"github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/pkg/auth"
 	"storj.io/storj/pkg/macaroon"

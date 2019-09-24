@@ -5,7 +5,7 @@ package accounting
 
 import (
 	"github.com/skyrings/skyring-common/tools/uuid"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/pkg/pb"
 )

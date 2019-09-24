@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/zeebo/errs"
-	"gopkg.in/spacemonkeygo/monkit.v2"
+	"github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/pkg/pb"
 )

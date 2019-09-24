@@ -11,7 +11,7 @@ import (
 	"github.com/golang/protobuf/ptypes"
 	"github.com/zeebo/errs"
 	"go.uber.org/zap"
-	"gopkg.in/spacemonkeygo/monkit.v2"
+	"github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/pkg/pb"
 	"storj.io/storj/storagenode/bandwidth"

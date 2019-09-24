@@ -12,8 +12,8 @@ import (
 	"strings"
 
 	"go.uber.org/zap"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
-	"gopkg.in/spacemonkeygo/monkit.v2/present"
+	monkit "github.com/spacemonkeygo/monkit/v3"
+	"github.com/spacemonkeygo/monkit/v3/present"
 
 	"storj.io/storj/internal/version"
 )
@@ -84,9 +84,9 @@ func prometheus(w http.ResponseWriter, r *http.Request) {
 	// writes https://prometheus.io/docs/instrumenting/exposition_formats/
 	// TODO(jt): deeper monkit integration so we can expose prometheus types
 	// (https://prometheus.io/docs/concepts/metric_types/)
-	monkit.Default.Stats(func(name string, val float64) {
-		metric := sanitize(name)
-		_, _ = fmt.Fprintf(w, "# TYPE %s gauge\n%s %g\n",
-			metric, metric, val)
-	})
+	// monkit.Default.Stats(func(name string, val float64) {
+	// 	metric := sanitize(name)
+	// 	_, _ = fmt.Fprintf(w, "# TYPE %s gauge\n%s %g\n",
+	// 		metric, metric, val)
+	// })
 }

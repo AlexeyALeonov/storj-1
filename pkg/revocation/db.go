@@ -9,7 +9,7 @@ import (
 	"crypto/x509/pkix"
 
 	"github.com/zeebo/errs"
-	"gopkg.in/spacemonkeygo/monkit.v2"
+	"github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/pkg/identity"
 	"storj.io/storj/pkg/peertls"

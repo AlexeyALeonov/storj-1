@@ -5,7 +5,7 @@ package identity // import "storj.io/storj/pkg/identity"
 
 import (
 	"github.com/zeebo/errs"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 )
 
 var (

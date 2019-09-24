@@ -10,7 +10,7 @@ import (
 	"github.com/zeebo/errs"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
-	"gopkg.in/spacemonkeygo/monkit.v2"
+	"github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/pkg/pb"
 	"storj.io/storj/pkg/transport"

@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"go.uber.org/zap"
-	monkit "gopkg.in/spacemonkeygo/monkit.v2"
+	monkit "github.com/spacemonkeygo/monkit/v3"
 
 	"storj.io/storj/internal/sync2"
 )
