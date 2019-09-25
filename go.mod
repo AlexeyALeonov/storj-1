@@ -2,7 +2,7 @@ module storj.io/storj
 
 go 1.12
 
-replace github.com/zeebo/admission => github.com/bryanchriswhite/admission v0.0.0-20190925171623-9c3612ec43de
+replace github.com/zeebo/admission => github.com/bryanchriswhite/admission v0.0.0-20190925182811-94bbfcdfb0da
 
 replace github.com/jtolds/monkit-hw => github.com/bryanchriswhite/monkit-hw v0.0.0-20190925193506-66ca7b8b0136
 
