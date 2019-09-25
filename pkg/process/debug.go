@@ -11,9 +11,9 @@ import (
 	"net/http/pprof"
 	"strings"
 
-	"go.uber.org/zap"
-	monkit "github.com/spacemonkeygo/monkit/v3"
+	"github.com/spacemonkeygo/monkit/v3"
 	"github.com/spacemonkeygo/monkit/v3/present"
+	"go.uber.org/zap"
 
 	"storj.io/storj/internal/version"
 )
@@ -84,9 +84,17 @@ func prometheus(w http.ResponseWriter, r *http.Request) {
 	// writes https://prometheus.io/docs/instrumenting/exposition_formats/
 	// TODO(jt): deeper monkit integration so we can expose prometheus types
 	// (https://prometheus.io/docs/concepts/metric_types/)
-	// monkit.Default.Stats(func(name string, val float64) {
-	// 	metric := sanitize(name)
-	// 	_, _ = fmt.Fprintf(w, "# TYPE %s gauge\n%s %g\n",
-	// 		metric, metric, val)
-	// })
+	monkit.Default.Stats(func(series monkit.Series, val float64) {
+		measurement := sanitize(series.Measurement)
+		var metrics []string
+		for tag, tagVal := range series.Tags.All() {
+			metric := sanitize(tag) + "=\"" + sanitize(tagVal) + "\""
+			metrics = append(metrics, metric)
+		}
+		fieldMetric := "field=\"" + sanitize(series.Field) + "\""
+		metrics = append(metrics, fieldMetric)
+
+		_, _ = fmt.Fprintf(w, "# TYPE %s gauge\n%s{"+
+			strings.Join(metrics, ",")+"} %g\n", measurement, measurement, val)
+	})
 }
