@@ -2,7 +2,7 @@ module storj.io/storj
 
 go 1.12
 
-replace github.com/zeebo/admission => github.com/bryanchriswhite/admission v0.0.0-20190925175625-c069c7a86e1b
+replace github.com/zeebo/admission => github.com/bryanchriswhite/admission v0.0.0-20190925171623-9c3612ec43de
 
 // force specific versions for minio
 require (
