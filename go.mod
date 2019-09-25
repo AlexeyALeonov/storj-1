@@ -2,7 +2,7 @@ module storj.io/storj
 
 go 1.12
 
-replace gopkg.in/spacemonkeygo/monkit.v3 => /home/jeff/go/src/github.com/spacemonkeygo/monkit
+replace github.com/zeebo/admission => github.com/bryanchriswhite/admission v0.0.0-20190925171623-9c3612ec43de
 
 // force specific versions for minio
 require (
@@ -126,7 +126,6 @@ require (
 	gopkg.in/Shopify/sarama.v1 v1.18.0 // indirect
 	gopkg.in/cheggaaa/pb.v1 v1.0.25 // indirect
 	gopkg.in/olivere/elastic.v5 v5.0.76 // indirect
-	gopkg.in/spacemonkeygo/monkit.v3 v3.0.0-00010101000000-000000000000
 	gopkg.in/yaml.v2 v2.2.2
 	storj.io/drpc v0.0.3
 )
