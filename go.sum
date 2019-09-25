@@ -36,11 +36,8 @@ github.com/blang/semver v3.5.1+incompatible/go.mod h1:kRBLl5iJ+tD4TcOOxsy/0fnweb
 github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869/go.mod h1:Ekp36dRnpXw/yCqJaO+ZrUyxD+3VXMFFr56k5XYrpB4=
 github.com/boltdb/bolt v1.3.1 h1:JQmyP4ZBrce+ZQu0dY660FMfatumYDLun9hBCUVIkF4=
 github.com/boltdb/bolt v1.3.1/go.mod h1:clJnj/oiGkjum5o1McbSZDSLxVThjynRyGBgiAx27Ps=
-github.com/bryanchriswhite/admission v0.0.0-20190925171623-9c3612ec43de h1:ihxQDw/9ln4ap1zVPQj09ABrl+ZEvbEsGLrq04WQ2rk=
-github.com/bryanchriswhite/admission v0.0.0-20190925171623-9c3612ec43de/go.mod h1:DocOVMyV2lmglMD8MSNXfih2//FRhtGpHdXzVk5Yl+8=
-github.com/bryanchriswhite/admission v0.0.0-20190925182811-94bbfcdfb0da h1:1yxPM7j+a/kKzSdxi6gWyHLmSMSrtbHyywzzzfoBpsw=
-github.com/bryanchriswhite/admission v0.0.0-20190925182811-94bbfcdfb0da/go.mod h1:DocOVMyV2lmglMD8MSNXfih2//FRhtGpHdXzVk5Yl+8=
-github.com/bryanchriswhite/monkit-hw v0.0.0-20190925193506-66ca7b8b0136/go.mod h1:g7bgGiAuAzMM5pe8XJhR4bCsWIBhy/FEkBCJsRpSjXE=
+github.com/bryanchriswhite/admission v0.0.0-20190925204542-cb6edb9b3cb6/go.mod h1:y7Nlt9Ej0PgplBSLMcKucdRQ3i9qd/J/2WWKvRYvel0=
+github.com/bryanchriswhite/monkit-hw v0.0.0-20190925204645-20da8119297d/go.mod h1:HQ9sGlMXatekuFa8pkhhRTRwcO1ts2or0fcpgv0Hhxc=
 github.com/btcsuite/btcutil v0.0.0-20180706230648-ab6388e0c60a h1:RQMUrEILyYJEoAT34XS/kLu40vC0+po/UfxrBBA4qZE=
 github.com/btcsuite/btcutil v0.0.0-20180706230648-ab6388e0c60a/go.mod h1:+5NJ2+qvTyV9exUAL/rxXi3DcLg2Ts+ymUAY5y4NvMg=
 github.com/cespare/xxhash v1.1.0/go.mod h1:XrSqR1VqqWfGrhpAt58auRo0WTKS1nRRg3ghfAqPWnc=
@@ -362,8 +359,7 @@ github.com/soheilhy/cmux v0.1.4/go.mod h1:IM3LyeVVIOuxMH7sFAkER9+bJ4dT7Ms6E4xg4k
 github.com/spacemonkeygo/errors v0.0.0-20171212215202-9064522e9fd1 h1:xHQewZjohU9/wUsyC99navCjQDNHtTgUOM/J1jAbzfw=
 github.com/spacemonkeygo/errors v0.0.0-20171212215202-9064522e9fd1/go.mod h1:7NL9UAYQnRM5iKHUCld3tf02fKb5Dft+41+VckASUy0=
 github.com/spacemonkeygo/monkit v0.0.0-20190623001553-09813957f0a8 h1:sO833wsQOMWK0ZW68mWYVhRwlcUaL125bUh1LeR7vxI=
-github.com/spacemonkeygo/monkit/v3 v3.0.0-20190925165449-457167bbbdb2 h1:64Oj4ovmpXgVnB2Fhjh4KTQoKh9oaGh7gLwnUEB8OEA=
-github.com/spacemonkeygo/monkit/v3 v3.0.0-20190925165449-457167bbbdb2/go.mod h1:JcK1pCbReQsOsMKF/POFSZCq7drXFybgGmbc27tuwes=
+github.com/spacemonkeygo/monkit/v3 v3.0.0-20190925203444-ad5e161bb3cd/go.mod h1:JcK1pCbReQsOsMKF/POFSZCq7drXFybgGmbc27tuwes=
 github.com/spacemonkeygo/monotime v0.0.0-20180824235756-e3f48a95f98a h1:8+cCjxhToanKmxLIbuyBNe2EnpgwhiivsIaRJstDRFA=
 github.com/spacemonkeygo/monotime v0.0.0-20180824235756-e3f48a95f98a/go.mod h1:ul4bvvnCOPZgq8w0nTkSmWVg/hauVpFS97Am1YM1XXo=
 github.com/spacemonkeygo/spacelog v0.0.0-20180420211403-2296661a0572 h1:RC6RW7j+1+HkWaX/Yh71Ee5ZHaHYt7ZP4sQgUrm6cDU=

@@ -2,9 +2,9 @@ module storj.io/storj
 
 go 1.12
 
-replace github.com/zeebo/admission => github.com/bryanchriswhite/admission v0.0.0-20190925182811-94bbfcdfb0da
+replace github.com/zeebo/admission => github.com/bryanchriswhite/admission v0.0.0-20190925204542-cb6edb9b3cb6
 
-replace github.com/jtolds/monkit-hw => github.com/bryanchriswhite/monkit-hw v0.0.0-20190925193506-66ca7b8b0136
+replace github.com/jtolds/monkit-hw => github.com/bryanchriswhite/monkit-hw v0.0.0-20190925204645-20da8119297d
 
 // force specific versions for minio
 require (
@@ -99,7 +99,7 @@ require (
 	github.com/sirupsen/logrus v1.3.0 // indirect
 	github.com/skyrings/skyring-common v0.0.0-20160929130248-d1c0bb1cbd5e
 	github.com/spacemonkeygo/errors v0.0.0-20171212215202-9064522e9fd1 // indirect
-	github.com/spacemonkeygo/monkit/v3 v3.0.0-20190925165449-457167bbbdb2
+	github.com/spacemonkeygo/monkit/v3 v3.0.0-20190925203444-ad5e161bb3cd
 	github.com/spf13/cast v1.3.0
 	github.com/spf13/cobra v0.0.3
 	github.com/spf13/pflag v1.0.3
