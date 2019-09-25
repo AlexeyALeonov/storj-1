@@ -4,6 +4,8 @@ go 1.12
 
 replace github.com/zeebo/admission => github.com/bryanchriswhite/admission v0.0.0-20190925171623-9c3612ec43de
 
+replace github.com/jtolds/monkit-hw => github.com/bryanchriswhite/monkit-hw v0.0.0-20190925193506-66ca7b8b0136
+
 // force specific versions for minio
 require (
 	github.com/btcsuite/btcutil v0.0.0-20180706230648-ab6388e0c60a
