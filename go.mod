@@ -2,8 +2,6 @@ module storj.io/storj
 
 go 1.12
 
-replace github.com/zeebo/admission/v2 => github.com/bryanchriswhite/admission/v2 v2.0.0-20190925220216-76b521dfd3ec
-
 replace github.com/jtolds/monkit-hw => github.com/bryanchriswhite/monkit-hw v0.0.0-20190925204645-20da8119297d
 
 // force specific versions for minio
@@ -111,7 +109,7 @@ require (
 	github.com/tidwall/match v0.0.0-20171002075945-1731857f09b1 // indirect
 	github.com/vivint/infectious v0.0.0-20190108171102-2455b059135b
 	github.com/yuin/gopher-lua v0.0.0-20180918061612-799fa34954fb // indirect
-	github.com/zeebo/admission/v2 v2.0.0-20180821192747-f24f2a94a40c
+	github.com/zeebo/admission/v2 v2.0.0-20190925222005-f82c3dd03cb5
 	github.com/zeebo/errs v1.2.2
 	github.com/zeebo/float16 v0.1.0 // indirect
 	github.com/zeebo/incenc v0.0.0-20180505221441-0d92902eec54 // indirect

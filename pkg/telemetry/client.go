@@ -8,8 +8,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/zeebo/admission/admmonkit"
-	"github.com/zeebo/admission/admproto"
+	"github.com/zeebo/admission/v2/admmonkit"
+	"github.com/zeebo/admission/v2/admproto"
 	"go.uber.org/zap"
 	monkit "github.com/spacemonkeygo/monkit/v3"
 )

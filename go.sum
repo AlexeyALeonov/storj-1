@@ -36,8 +36,6 @@ github.com/blang/semver v3.5.1+incompatible/go.mod h1:kRBLl5iJ+tD4TcOOxsy/0fnweb
 github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869/go.mod h1:Ekp36dRnpXw/yCqJaO+ZrUyxD+3VXMFFr56k5XYrpB4=
 github.com/boltdb/bolt v1.3.1 h1:JQmyP4ZBrce+ZQu0dY660FMfatumYDLun9hBCUVIkF4=
 github.com/boltdb/bolt v1.3.1/go.mod h1:clJnj/oiGkjum5o1McbSZDSLxVThjynRyGBgiAx27Ps=
-github.com/bryanchriswhite/admission/v2 v2.0.0-20190925220216-76b521dfd3ec h1:a4+pSDkVfYe5jjLrcDyw1URQa2/+UmqpxCxgpIorjK4=
-github.com/bryanchriswhite/admission/v2 v2.0.0-20190925220216-76b521dfd3ec/go.mod h1:va8HhSfMgn993Obt6Q2Ndol0UIP8L0J7QkCnjJEdBGQ=
 github.com/bryanchriswhite/monkit-hw v0.0.0-20190925204645-20da8119297d/go.mod h1:HQ9sGlMXatekuFa8pkhhRTRwcO1ts2or0fcpgv0Hhxc=
 github.com/btcsuite/btcutil v0.0.0-20180706230648-ab6388e0c60a h1:RQMUrEILyYJEoAT34XS/kLu40vC0+po/UfxrBBA4qZE=
 github.com/btcsuite/btcutil v0.0.0-20180706230648-ab6388e0c60a/go.mod h1:+5NJ2+qvTyV9exUAL/rxXi3DcLg2Ts+ymUAY5y4NvMg=
@@ -404,6 +402,8 @@ github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q
 github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:aYKd//L2LvnjZzWKhF00oedf4jCCReLcmhLdhm1A27Q=
 github.com/yuin/gopher-lua v0.0.0-20180918061612-799fa34954fb h1:Jmfk7z2f/+gxVFAgPsJMuczO1uEIxZy6wytTdeZ49lg=
 github.com/yuin/gopher-lua v0.0.0-20180918061612-799fa34954fb/go.mod h1:aEV29XrmTYFr3CiRxZeGHpkvbwq+prZduBqMaascyCU=
+github.com/zeebo/admission/v2 v2.0.0-20190925222005-f82c3dd03cb5 h1:3fFGv8+tgBEdjxj3ZAI1CMrPYLb69M16zedgwW34ZvE=
+github.com/zeebo/admission/v2 v2.0.0-20190925222005-f82c3dd03cb5/go.mod h1:va8HhSfMgn993Obt6Q2Ndol0UIP8L0J7QkCnjJEdBGQ=
 github.com/zeebo/assert v0.0.0-20181109011804-10f827ce2ed6 h1:bs7mSHVrLRQHxqWcm0hyez0sA23YuXb8Pwnq5NhyZ8A=
 github.com/zeebo/assert v0.0.0-20181109011804-10f827ce2ed6/go.mod h1:yssERNPivllc1yU3BvpjYI5BUW+zglcz6QWqeVRL5t0=
 github.com/zeebo/assert v1.0.0 h1:qw3LXzO7lbptWIQ6DsemJIUOoaqyKbgY3M8b8yvlaaY=
