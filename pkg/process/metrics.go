@@ -9,10 +9,11 @@ import (
 	"os"
 	"path/filepath"
 
+	hw "github.com/jtolds/monkit-hw/v2"
+	"github.com/spacemonkeygo/monkit/v3"
+	"github.com/spacemonkeygo/monkit/v3/environment"
 	"github.com/zeebo/admission/v2/admproto"
 	"go.uber.org/zap"
-	monkit "github.com/spacemonkeygo/monkit/v3"
-	"github.com/spacemonkeygo/monkit/v3/environment"
 
 	"storj.io/storj/internal/version"
 	"storj.io/storj/pkg/cfgstruct"
@@ -68,7 +69,7 @@ func InitMetrics(ctx context.Context, log *zap.Logger, r *monkit.Registry, insta
 		return err
 	}
 	environment.Register(r)
-	// hw.Register(r)
+	hw.Register(r)
 	r.ScopeNamed("env").Chain("version", monkit.StatSourceFunc(version.Build.Stats))
 	go c.Run(ctx)
 	return nil

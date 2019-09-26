@@ -2,8 +2,6 @@ module storj.io/storj
 
 go 1.12
 
-replace github.com/jtolds/monkit-hw => github.com/bryanchriswhite/monkit-hw v0.0.0-20190925204645-20da8119297d
-
 // force specific versions for minio
 require (
 	github.com/btcsuite/btcutil v0.0.0-20180706230648-ab6388e0c60a
@@ -60,7 +58,7 @@ require (
 	github.com/inconshreveable/go-update v0.0.0-20160112193335-8152e7eb6ccf // indirect
 	github.com/jbenet/go-base58 v0.0.0-20150317085156-6237cf65f3a6
 	github.com/jtolds/go-luar v0.0.0-20170419063437-0786921db8c0
-	github.com/jtolds/monkit-hw v0.0.0-20190108155550-0f753668cf20
+	github.com/jtolds/monkit-hw/v2 v2.0.0-20190926195117-7cc7b751bc54
 	github.com/klauspost/cpuid v0.0.0-20180405133222-e7e905edc00e // indirect
 	github.com/klauspost/reedsolomon v0.0.0-20180704173009-925cb01d6510 // indirect
 	github.com/lib/pq v1.0.0
@@ -85,8 +83,6 @@ require (
 	github.com/nats-io/nuid v1.0.0 // indirect
 	github.com/nsf/jsondiff v0.0.0-20160203110537-7de28ed2b6e3
 	github.com/nsf/termbox-go v0.0.0-20190121233118-02980233997d
-	github.com/onsi/ginkgo v1.7.0 // indirect
-	github.com/onsi/gomega v1.4.3 // indirect
 	github.com/pascaldekloe/goe v0.0.0-20180627143212-57f6aae5913c // indirect
 	github.com/pierrec/lz4 v2.0.5+incompatible // indirect
 	github.com/pkg/errors v0.8.1 // indirect
@@ -97,13 +93,13 @@ require (
 	github.com/sirupsen/logrus v1.3.0 // indirect
 	github.com/skyrings/skyring-common v0.0.0-20160929130248-d1c0bb1cbd5e
 	github.com/spacemonkeygo/errors v0.0.0-20171212215202-9064522e9fd1 // indirect
-	github.com/spacemonkeygo/monkit/v3 v3.0.0-20190925203444-ad5e161bb3cd
+	github.com/spacemonkeygo/monkit/v3 v3.0.0-20190926200430-51dbb2c6b0e1
 	github.com/spf13/cast v1.3.0
 	github.com/spf13/cobra v0.0.3
 	github.com/spf13/pflag v1.0.3
 	github.com/spf13/viper v1.4.0
 	github.com/streadway/amqp v0.0.0-20180806233856-70e15c650864 // indirect
-	github.com/stretchr/testify v1.3.0
+	github.com/stretchr/testify v1.4.0
 	github.com/stripe/stripe-go v60.17.0+incompatible
 	github.com/tidwall/gjson v1.1.3 // indirect
 	github.com/tidwall/match v0.0.0-20171002075945-1731857f09b1 // indirect
@@ -111,8 +107,6 @@ require (
 	github.com/yuin/gopher-lua v0.0.0-20180918061612-799fa34954fb // indirect
 	github.com/zeebo/admission/v2 v2.0.0-20190925222005-f82c3dd03cb5
 	github.com/zeebo/errs v1.2.2
-	github.com/zeebo/float16 v0.1.0 // indirect
-	github.com/zeebo/incenc v0.0.0-20180505221441-0d92902eec54 // indirect
 	github.com/zeebo/structs v1.0.2
 	go.uber.org/zap v1.10.0
 	golang.org/x/crypto v0.0.0-20190911031432-227b76d455e7
