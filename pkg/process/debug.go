@@ -82,7 +82,6 @@ func sanitize(val string) string {
 
 func prometheus(w http.ResponseWriter, r *http.Request) {
 	// writes https://prometheus.io/docs/instrumenting/exposition_formats/
-	// TODO(jt): deeper monkit integration so we can expose prometheus types
 	// (https://prometheus.io/docs/concepts/metric_types/)
 	monkit.Default.Stats(func(series monkit.Series, val float64) {
 		measurement := sanitize(series.Measurement)
