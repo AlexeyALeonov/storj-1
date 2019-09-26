@@ -6,13 +6,12 @@ package nodestats
 import (
 	"context"
 
-	"go.uber.org/zap"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/status"
 	"github.com/spacemonkeygo/monkit/v3"
+	"go.uber.org/zap"
 
 	"storj.io/storj/pkg/identity"
 	"storj.io/storj/pkg/pb"
+	"storj.io/storj/pkg/rpc/rpcstatus"
 	"storj.io/storj/satellite/accounting"
 	"storj.io/storj/satellite/overlay"
 )
@@ -45,15 +44,15 @@ func (e *Endpoint) GetStats(ctx context.Context, req *pb.GetStatsRequest) (_ *pb
 
 	peer, err := identity.PeerIdentityFromContext(ctx)
 	if err != nil {
-		return nil, status.Error(codes.Unauthenticated, err.Error())
+		return nil, rpcstatus.Error(rpcstatus.Unauthenticated, err.Error())
 	}
 	node, err := e.overlay.Get(ctx, peer.ID)
 	if err != nil {
 		if overlay.ErrNodeNotFound.Has(err) {
-			return nil, status.Error(codes.PermissionDenied, err.Error())
+			return nil, rpcstatus.Error(rpcstatus.PermissionDenied, err.Error())
 		}
 		e.log.Error("overlay.Get failed", zap.Error(err))
-		return nil, status.Error(codes.Internal, err.Error())
+		return nil, rpcstatus.Error(rpcstatus.Internal, err.Error())
 	}
 
 	uptimeScore := calculateReputationScore(
@@ -89,21 +88,21 @@ func (e *Endpoint) DailyStorageUsage(ctx context.Context, req *pb.DailyStorageUs
 
 	peer, err := identity.PeerIdentityFromContext(ctx)
 	if err != nil {
-		return nil, status.Error(codes.Unauthenticated, err.Error())
+		return nil, rpcstatus.Error(rpcstatus.Unauthenticated, err.Error())
 	}
 	node, err := e.overlay.Get(ctx, peer.ID)
 	if err != nil {
 		if overlay.ErrNodeNotFound.Has(err) {
-			return nil, status.Error(codes.PermissionDenied, err.Error())
+			return nil, rpcstatus.Error(rpcstatus.PermissionDenied, err.Error())
 		}
 		e.log.Error("overlay.Get failed", zap.Error(err))
-		return nil, status.Error(codes.Internal, err.Error())
+		return nil, rpcstatus.Error(rpcstatus.Internal, err.Error())
 	}
 
 	nodeSpaceUsages, err := e.accounting.QueryStorageNodeUsage(ctx, node.Id, req.GetFrom(), req.GetTo())
 	if err != nil {
 		e.log.Error("accounting.QueryStorageNodeUsage failed", zap.Error(err))
-		return nil, status.Error(codes.Internal, err.Error())
+		return nil, rpcstatus.Error(rpcstatus.Internal, err.Error())
 	}
 
 	return &pb.DailyStorageUsageResponse{

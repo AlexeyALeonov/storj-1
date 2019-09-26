@@ -129,5 +129,5 @@ require (
 	gopkg.in/cheggaaa/pb.v1 v1.0.25 // indirect
 	gopkg.in/olivere/elastic.v5 v5.0.76 // indirect
 	gopkg.in/yaml.v2 v2.2.2
-	storj.io/drpc v0.0.3
+	storj.io/drpc v0.0.4
 )
