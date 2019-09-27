@@ -26,11 +26,14 @@ else
   RELEASE=false
 fi
 
+# Start hacks
+COMMIT=$(git rev-parse HEAD)
 RELEASE=true
+VERSION=v0.21.3
 
 echo Running "go $@"
 exec go "$1" -ldflags \
-	"-X storj.io/storj/internal/version.buildTimestamp=$TIMESTAMP
+	"-s -w -X storj.io/storj/internal/version.buildTimestamp=$TIMESTAMP
          -X storj.io/storj/internal/version.buildCommitHash=$COMMIT
          -X storj.io/storj/internal/version.buildVersion=$VERSION
          -X storj.io/storj/internal/version.buildRelease=$RELEASE" "${@:2}"
